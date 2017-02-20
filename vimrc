@@ -1,7 +1,16 @@
 execute pathogen#infect()
-syntax on
 filetype plugin indent on
+
+" In Linux, make sure these lines are added into ~/.bashrc:
+" if [[ "$TERM" =~ "term" ]]; then
+"   export TERM="xterm-256color"
+" fi
+"
+if $COLORTERM == 'gnome-terminal'
+  set t_Co=256
+endif
 set background=dark
+syntax on
 colorscheme hybrid
 
 set number
@@ -28,8 +37,12 @@ match OverLength /\%81v.\+/
 
 "==== vim-plug ====
 call plug#begin('~/.vim/plugged')
-" Need to install fzf with Homebrew: brew install fzf
-Plug '/usr/local/opt/fzf'
+" Need to install fzf with git:
+" git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+" ~/.fzf/install
+"
+" Then apply :PlugInstall in vim
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 call plug#end()
 
 "==== Mozilla Firefox ====
