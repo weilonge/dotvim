@@ -24,6 +24,8 @@ nmap <C-N><C-N> :set invnumber<CR>
 highlight OverLength ctermbg=red ctermfg=white guibg=#592929
 match OverLength /\%81v.\+/
 
-
-
+call plug#begin('~/.vim/plugged')
+" Need to install fzf with Homebrew: brew install fzf
+Plug '/usr/local/opt/fzf'
+call plug#end()
 
