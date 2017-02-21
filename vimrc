@@ -43,6 +43,8 @@ call plug#begin('~/.vim/plugged')
 "
 " Then apply :PlugInstall in vim
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+
+Plug 'pangloss/vim-javascript'
 call plug#end()
 
 "==== Mozilla Firefox ====
@@ -58,4 +60,11 @@ autocmd FileType javascript,html
    \ endif
 
 autocmd BufRead,BufNewFile *.jsm set filetype=javascript
+
+"==== vim-javascript ====
+let g:javascript_plugin_jsdoc = 1
+
+"==== vim-airline ====
+set laststatus=2
+let g:airline_powerline_fonts = 1
 
