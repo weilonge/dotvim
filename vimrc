@@ -50,6 +50,10 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'pangloss/vim-javascript'
 call plug#end()
 
+"==== Syntastic ====
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
+" nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+
 "==== Mozilla Firefox ====
 " Need to add these two lines in ~/.bash_profile:
 " export MOZILLA_SRC_ROOT=/path/to/gecko
@@ -57,6 +61,7 @@ call plug#end()
 "
 autocmd FileType javascript,html
    \ if stridx(expand("%:p"), $MOZILLA_SRC_ROOT_PREFIX) != -1 |
+   \    let b:syntastic_mode = 'active' |
    \    let b:syntastic_checkers = ['eslint'] |
    \    let b:syntastic_eslint_exec = $MOZILLA_SRC_ROOT . "/tools/lint/eslint/node_modules/.bin/eslint" |
    \    let b:syntastic_html_eslint_args = ['--plugin', 'html'] |
