@@ -11,6 +11,8 @@ if $COLORTERM == 'gnome-terminal'
 endif
 set background=dark
 syntax on
+" If there is any trouble about using 256-color theme, use this line instead:
+" colorscheme noctu
 colorscheme hybrid
 
 set number
