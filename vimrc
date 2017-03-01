@@ -1,6 +1,3 @@
-execute pathogen#infect()
-filetype plugin indent on
-
 " In Linux, make sure these lines are added into ~/.bashrc:
 " if [[ "$TERM" =~ "term" ]]; then
 "   export TERM="xterm-256color"
@@ -43,6 +40,12 @@ endif
 
 "==== vim-plug ====
 call plug#begin('~/.vim/plugged')
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-syntastic/syntastic'
+Plug 'airblade/vim-gitgutter'
+Plug 'ervandew/supertab'
+
 " Need to install fzf with git:
 " git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 " ~/.fzf/install
