@@ -45,6 +45,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-syntastic/syntastic'
 Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
+Plug 'xolox/vim-session'
+Plug 'xolox/vim-misc'
 
 " Need to install fzf with git:
 " git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -113,4 +115,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
+
+"==== vim-session ====
+let g:session_autosave = 'no'
 
