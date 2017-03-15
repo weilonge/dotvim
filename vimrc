@@ -92,6 +92,8 @@ let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_
 " nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
 "==== Mozilla Firefox ====
+" Apply this command to setup eslint in m-c
+" $ ./mach eslint --setup
 " Need to add these two lines in ~/.bash_profile:
 " export MOZILLA_SRC_ROOT=/path/to/gecko
 " export MOZILLA_SRC_ROOT_PREFIX=/gecko/
