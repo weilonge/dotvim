@@ -123,3 +123,12 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 "==== vim-session ====
 let g:session_autosave = 'no'
 
+"==== window switch ====
+:nmap <silent> <C-h> :wincmd h<CR>
+:nmap <silent> <C-j> :wincmd j<CR>
+:nmap <silent> <C-k> :wincmd k<CR>
+:nmap <silent> <C-l> :wincmd l<CR>
+
+"==== buffer switch ====
+:nmap <silent> <leader>[ :bprev<CR>
+:nmap <silent> <leader>] :bnext<CR>
