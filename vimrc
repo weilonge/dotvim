@@ -55,7 +55,9 @@ Plug 'xolox/vim-misc'
 " Then apply :PlugInstall in vim
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
-Plug 'pangloss/vim-javascript'
+Plug 'pangloss/vim-javascript', {'for': ['js', 'jsm', 'html', 'xml', 'css', 'json']}
+
+Plug 'maksimr/vim-jsbeautify', {'for': ['js', 'jsm', 'html', 'xml', 'css', 'json']}
 call plug#end()
 
 if executable('fzf')
