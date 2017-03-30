@@ -12,13 +12,19 @@ syntax on
 " colorscheme noctu
 colorscheme hybrid
 
-set number
 set backspace=indent,eol,start
-set tabstop=2
+set tabstop=2           " number of visual spaces per TAB
 set shiftwidth=2
-set showcmd
-set expandtab
+set expandtab           " tabs are spaces
 " set autoindent
+set number              " show line numbers
+set showcmd             " show command in bottom bar
+set cursorline          " highlight current line
+set showmatch           " highlight matching [{()}]
+set wildmenu            " visual autocomplete for command menu
+
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
 
 "==== gitgutter ====
 " for gitgutter
@@ -53,11 +59,11 @@ Plug 'xolox/vim-misc'
 " ~/.fzf/install
 "
 " Then apply :PlugInstall in vim
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all', 'on': 'FZF' }
 
 Plug 'pangloss/vim-javascript', {'for': ['js', 'jsm', 'html', 'xml', 'css', 'json']}
 
-Plug 'maksimr/vim-jsbeautify', {'for': ['js', 'jsm', 'html', 'xml', 'css', 'json']}
+Plug 'maksimr/vim-jsbeautify', {'on': ['DontLoadMe']} " Workaround to prevent loading.
 call plug#end()
 
 if executable('fzf')
@@ -126,10 +132,12 @@ let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:session_autosave = 'no'
 
 "==== window switch ====
-:nmap <silent> <C-h> :wincmd h<CR>
-:nmap <silent> <C-j> :wincmd j<CR>
-:nmap <silent> <C-k> :wincmd k<CR>
-:nmap <silent> <C-l> :wincmd l<CR>
+:nmap <silent> <leader>- :wincmd h<CR>
+:nmap <silent> <leader>= :wincmd l<CR>
+" :nmap <silent> <C-h> :wincmd h<CR>
+" :nmap <silent> <C-j> :wincmd j<CR>
+" :nmap <silent> <C-k> :wincmd k<CR>
+" :nmap <silent> <C-l> :wincmd l<CR>
 
 "==== buffer switch ====
 :nmap <silent> <leader>[ :bprev<CR>
