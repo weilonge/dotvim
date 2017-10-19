@@ -33,9 +33,11 @@ set hlsearch            " highlight matches
 " nmap <F2> <Plug>GitGutterPrevHunk
 " nmap <F10> <Plug>GitGutterNextHunk
 
-" Toggle line numbers and fold column
-" for easy copying:
+" Toggle line numbers and fold column for easy copying:
 nmap <C-N><C-N> :set invnumber<CR>
+
+" Toggle paste mode or easy pasting:
+nmap <C-P><C-P> :set invpaste<CR>
 
 "==== OverLength 80 ====
 if exists('+colorcolumn')
