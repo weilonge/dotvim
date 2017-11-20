@@ -36,6 +36,9 @@ set hlsearch            " highlight matches
 " Toggle line numbers and fold column for easy copying:
 nmap <C-N><C-N> :set invnumber<CR>
 
+" Toggle relative line number
+nmap <C-L><C-L> :set invrelativenumber<CR>
+
 " Toggle paste mode or easy pasting:
 nmap <C-P><C-P> :set invpaste<CR>
 
