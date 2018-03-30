@@ -60,6 +60,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
 Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
+Plug 'matze/vim-move'
 
 " Need to install fzf with git:
 " git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -138,6 +139,9 @@ let g:airline_theme='cobalt2'
 
 "==== vim-session ====
 let g:session_autosave = 'no'
+
+"==== vim-move ====
+let g:move_key_modifier = 'C'
 
 "==== window switch ====
 :nmap <silent> <leader>- :wincmd h<CR>
