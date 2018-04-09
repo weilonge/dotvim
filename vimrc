@@ -27,13 +27,6 @@ set wildmenu            " visual autocomplete for command menu
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 
-"==== gitgutter ====
-" for gitgutter
-" github.com/airblade/vim-gitgutter
-" preview, stage, and revert hunks with <leader>hp, <leader>hs, and <leader>hr
-" nmap <F2> <Plug>GitGutterPrevHunk
-" nmap <F10> <Plug>GitGutterNextHunk
-
 " Toggle line numbers and fold column for easy copying:
 nmap <C-N><C-N> :set invnumber<CR>
 
@@ -74,6 +67,7 @@ Plug 'pangloss/vim-javascript', {'for': ['js', 'jsm', 'html', 'xml', 'css', 'jso
 Plug 'maksimr/vim-jsbeautify', {'on': ['DontLoadMe']} " Workaround to prevent loading.
 call plug#end()
 
+"==== fzf ====
 if executable('fzf')
   " FZF {{{
   " <C-p> or <C-t> to search files
@@ -106,6 +100,12 @@ end
 "==== Syntastic ====
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
 " nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
+
+"==== vim-gitgutter ====
+" preview, stage, and revert hunks with <leader>hp, <leader>hs, and <leader>hr
+" nmap <F2> <Plug>GitGutterPrevHunk
+" nmap <F10> <Plug>GitGutterNextHunk
+set updatetime=750
 
 "==== vim-javascript ====
 let g:javascript_plugin_jsdoc = 1
