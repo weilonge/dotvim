@@ -126,6 +126,18 @@ let g:session_autosave = 'no'
 "==== vim-move ====
 let g:move_key_modifier = 'C'
 
+"==== White Spaces ====
+" usage: :call StripTrailingWhitespace()
+function StripTrailingWhitespace()
+  if !&binary && &filetype != 'diff'
+    normal mz
+    normal Hmy
+    %s/\s\+$//e
+    normal 'yz<CR>
+    normal `z
+  endif
+endfunction
+
 "==== window switch ====
 :nmap <silent> <leader>- :wincmd h<CR>
 :nmap <silent> <leader>= :wincmd l<CR>
