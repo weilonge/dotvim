@@ -4,5 +4,5 @@ Installation:
 
 Launch vim and apply :PlugInstall.
 
-    $ vim -c 'PlugUpgrade|PlugInstall|q|q'
+    $ vim +PlugUpgrade +PlugInstall +qa
 

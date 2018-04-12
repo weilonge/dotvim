@@ -62,7 +62,12 @@ Plug 'matze/vim-move'
 " Then apply :PlugInstall in vim
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all', 'on': 'FZF' }
 
-Plug 'pangloss/vim-javascript', {'for': ['js', 'jsm', 'html', 'xml', 'css', 'json']}
+Plug 'pangloss/vim-javascript', {'for': ['js', 'jsm', 'html', 'xml', 'css', 'json', 'jsx']}
+Plug 'mxw/vim-jsx'
+
+" othree's syntax is better than jelera's for me.
+"Plug 'jelera/vim-javascript-syntax'
+Plug 'othree/yajs.vim'
 
 Plug 'maksimr/vim-jsbeautify', {'on': ['DontLoadMe']} " Workaround to prevent loading.
 call plug#end()
