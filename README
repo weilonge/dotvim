@@ -2,7 +2,11 @@ Installation:
 
     $ git clone git://github.com/weilonge/dotvim.git ~/.vim
 
-Launch vim and apply :PlugInstall.
+Launch vim and apply :PlugInstall to install plugins. Or apply the following command in console to install or update plugins:
 
+Install:
     $ vim +PlugUpgrade +PlugInstall +qa
+
+Update:
+    $ vim +PlugUpgrade +PlugUpdate +qa
 
