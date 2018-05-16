@@ -20,7 +20,9 @@ set expandtab           " tabs are spaces
 " set autoindent
 set number              " show line numbers
 set showcmd             " show command in bottom bar
-set cursorline          " highlight current line
+if !filereadable(expand('~/.lowprofile'))
+  set cursorline          " highlight current line
+endif
 set showmatch           " highlight matching [{()}]
 set wildmenu            " visual autocomplete for command menu
 
@@ -116,7 +118,11 @@ let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_
 " preview, stage, and revert hunks with <leader>hp, <leader>hs, and <leader>hr
 " nmap <F2> <Plug>GitGutterPrevHunk
 " nmap <F10> <Plug>GitGutterNextHunk
-set updatetime=200
+if !filereadable(expand('~/.lowprofile'))
+  set updatetime=200
+else
+  set updatetime=750
+endif
 
 "==== vim-javascript ====
 let g:javascript_plugin_jsdoc = 1
