@@ -27,6 +27,8 @@ set wildmenu            " visual autocomplete for command menu
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 
+set autoread
+
 " Toggle line numbers and fold column for easy copying:
 nmap <C-N><C-N> :set invnumber<CR>
 
@@ -54,6 +56,7 @@ Plug 'ervandew/supertab'
 Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
 Plug 'matze/vim-move'
+Plug 'tmux-plugins/vim-tmux-focus-events'
 
 " Need to install fzf with git:
 " git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -113,7 +116,7 @@ let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_
 " preview, stage, and revert hunks with <leader>hp, <leader>hs, and <leader>hr
 " nmap <F2> <Plug>GitGutterPrevHunk
 " nmap <F10> <Plug>GitGutterNextHunk
-set updatetime=750
+set updatetime=200
 
 "==== vim-javascript ====
 let g:javascript_plugin_jsdoc = 1
