@@ -10,8 +10,8 @@ set background=dark
 syntax on
 " If there is any trouble about using 256-color theme, use this line instead:
 " colorscheme noctu
-" colorscheme hybrid
-colorscheme monokai
+colorscheme hybrid
+highlight LineNr ctermfg=239
 
 set backspace=indent,eol,start
 set tabstop=2           " number of visual spaces per TAB
