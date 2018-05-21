@@ -140,6 +140,13 @@ let g:airline_theme='cobalt2'
 "==== vim-session ====
 let g:session_autosave = 'no'
 
+"==== vim-gitgutter ====
+if v:version > 704 || has("patch-7-4-2201")
+  set signcolumn=yes
+else
+  let g:gitgutter_sign_column_always = 1
+endif
+
 "==== vim-move ====
 let g:move_key_modifier = 'C'
 
