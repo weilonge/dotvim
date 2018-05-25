@@ -31,11 +31,13 @@ set hlsearch            " highlight matches
 
 set autoread
 
+set hidden
+
 " Toggle line numbers and fold column for easy copying:
-nmap <C-N><C-N> :set invnumber<CR>
+" nmap <C-N><C-N> :set invnumber<CR>
 
 " Toggle relative line number
-nmap <C-L><C-L> :set invrelativenumber<CR>
+" nmap <C-L><C-L> :set invrelativenumber<CR>
 
 " Toggle paste mode or easy pasting:
 nmap <C-P><C-P> :set invpaste<CR>
@@ -57,7 +59,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ervandew/supertab'
 Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
-Plug 'matze/vim-move'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 
 " Need to install fzf with git:
@@ -147,9 +148,6 @@ else
   let g:gitgutter_sign_column_always = 1
 endif
 
-"==== vim-move ====
-let g:move_key_modifier = 'C'
-
 "==== White Spaces ====
 " usage: :call StripTrailingWhitespace()
 function StripTrailingWhitespace()
@@ -161,6 +159,8 @@ function StripTrailingWhitespace()
     normal `z
   endif
 endfunction
+
+autocmd BufWritePre * call StripTrailingWhitespace()
 
 "==== window switch ====
 :nmap <silent> <leader>- :wincmd h<CR>
