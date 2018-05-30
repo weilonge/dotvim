@@ -142,7 +142,7 @@ let g:airline_theme='cobalt2'
 let g:session_autosave = 'no'
 
 "==== vim-gitgutter ====
-if v:version > 704 || has("patch-7-4-2201")
+if exists('+signcolumn')
   set signcolumn=yes
 else
   let g:gitgutter_sign_column_always = 1
