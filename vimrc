@@ -1,17 +1,15 @@
-" In Linux, make sure these lines are added into ~/.bashrc:
-" if [[ "$TERM" =~ "term" ]]; then
-"   export TERM="xterm-256color"
-" fi
-"
-if $COLORTERM == 'gnome-terminal'
-  set t_Co=256
-endif
-set background=dark
 syntax on
-" If there is any trouble about using 256-color theme, use this line instead:
-" colorscheme noctu
-colorscheme hybrid
-highlight LineNr ctermfg=239
+set background=dark
+if (&t_Co == 256)
+  colorscheme hybrid
+  highlight LineNr ctermfg=239
+elseif (&t_Co == 16)
+  colorscheme noctu
+elseif (&t_Co == 8)
+  colorscheme jellybeans
+  highlight CursorLine ctermbg=0
+  highlight ColorColumn ctermbg=0
+endif
 
 set backspace=indent,eol,start
 set tabstop=2           " number of visual spaces per TAB
