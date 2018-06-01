@@ -1,14 +1,26 @@
 syntax on
 set background=dark
 if (&t_Co == 256)
+  function! _256ColorHighlights() abort
+    highlight LineNr ctermfg=239
+  endfunction
+  augroup _8ColorScheme
+    autocmd!
+    autocmd ColorScheme * call _256ColorHighlights()
+  augroup END
   colorscheme hybrid
-  highlight LineNr ctermfg=239
 elseif (&t_Co == 16)
   colorscheme noctu
 elseif (&t_Co == 8)
+  function! _8ColorHighlights() abort
+    highlight CursorLine ctermbg=0
+    highlight ColorColumn ctermbg=0
+  endfunction
+  augroup _8ColorScheme
+    autocmd!
+    autocmd ColorScheme * call _8ColorHighlights()
+  augroup END
   colorscheme jellybeans
-  highlight CursorLine ctermbg=0
-  highlight ColorColumn ctermbg=0
 endif
 
 set backspace=indent,eol,start
@@ -36,19 +48,19 @@ if exists('+clipboard')
 endif
 
 " Toggle line numbers and fold column for easy copying:
-" nmap <C-N><C-N> :set invnumber<CR>
+" nnoremap <C-N><C-N> :set invnumber<CR>
 
 " Toggle relative line number
-" nmap <C-L><C-L> :set invrelativenumber<CR>
+" nnoremap <C-L><C-L> :set invrelativenumber<CR>
 
 " Toggle paste mode or easy pasting:
-nmap <C-P><C-P> :set invpaste<CR>
+nnoremap <C-P><C-P> :set invpaste<CR>
 
 "==== OverLength 80 ====
 if exists('+colorcolumn')
   set colorcolumn=80
 else
-  au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+  autocmd BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
 "==== vim-plug ====
@@ -150,9 +162,9 @@ else
   let g:gitgutter_sign_column_always = 1
 endif
 
-"==== White Spaces ====
+"==== Trailing White Spaces ====
 " usage: :call StripTrailingWhitespace()
-function StripTrailingWhitespace()
+function! StripTrailingWhitespace() abort
   if !&binary && &filetype != 'diff'
     normal mz
     normal Hmy
@@ -161,17 +173,19 @@ function StripTrailingWhitespace()
     normal `z
   endif
 endfunction
-
-autocmd BufWritePre * call StripTrailingWhitespace()
+augroup AutoStripTrailingSpace
+  autocmd!
+  autocmd BufWritePre * call StripTrailingWhitespace()
+augroup END
 
 "==== window switch ====
-:nmap <silent> <leader>- :wincmd h<CR>
-:nmap <silent> <leader>= :wincmd l<CR>
-" :nmap <silent> <C-h> :wincmd h<CR>
-" :nmap <silent> <C-j> :wincmd j<CR>
-" :nmap <silent> <C-k> :wincmd k<CR>
-" :nmap <silent> <C-l> :wincmd l<CR>
+nnoremap <silent> <leader>- :wincmd h<CR>
+nnoremap <silent> <leader>= :wincmd l<CR>
+" nnoremap <silent> <C-h> :wincmd h<CR>
+" nnoremap <silent> <C-j> :wincmd j<CR>
+" nnoremap <silent> <C-k> :wincmd k<CR>
+" nnoremap <silent> <C-l> :wincmd l<CR>
 
 "==== buffer switch ====
-:nmap <silent> <leader>[ :bprev<CR>
-:nmap <silent> <leader>] :bnext<CR>
+nnoremap <silent> <leader>[ :bprev<CR>
+nnoremap <silent> <leader>] :bnext<CR>
