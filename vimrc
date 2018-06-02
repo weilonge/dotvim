@@ -31,6 +31,10 @@ set autoread
 
 set hidden
 
+if exists('+clipboard')
+  set clipboard^=unnamed,unnamedplus
+endif
+
 " Toggle line numbers and fold column for easy copying:
 " nmap <C-N><C-N> :set invnumber<CR>
 
