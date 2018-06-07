@@ -47,6 +47,8 @@ if exists('+clipboard')
   set clipboard^=unnamed,unnamedplus
 endif
 
+let mapleader = ","
+
 " Toggle line numbers and fold column for easy copying:
 " nnoremap <C-N><C-N> :set invnumber<CR>
 
@@ -179,13 +181,11 @@ augroup AutoStripTrailingSpace
 augroup END
 
 "==== window switch ====
-nnoremap <silent> <leader>- :wincmd h<CR>
-nnoremap <silent> <leader>= :wincmd l<CR>
-" nnoremap <silent> <C-h> :wincmd h<CR>
-" nnoremap <silent> <C-j> :wincmd j<CR>
-" nnoremap <silent> <C-k> :wincmd k<CR>
-" nnoremap <silent> <C-l> :wincmd l<CR>
+nnoremap <silent> <C-h> :wincmd h<CR>
+nnoremap <silent> <C-j> :wincmd j<CR>
+nnoremap <silent> <C-k> :wincmd k<CR>
+nnoremap <silent> <C-l> :wincmd l<CR>
 
 "==== buffer switch ====
-nnoremap <silent> <leader>[ :bprev<CR>
-nnoremap <silent> <leader>] :bnext<CR>
+nnoremap <silent> <leader>n :bprev<CR>
+nnoremap <silent> <leader>m :bnext<CR>
