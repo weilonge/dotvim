@@ -76,6 +76,7 @@ Plug 'ervandew/supertab'
 Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
 Plug 'tmux-plugins/vim-tmux-focus-events'
+Plug 'moll/vim-bbye'
 
 " Need to install fzf with git:
 " git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -126,6 +127,9 @@ if executable('fzf')
 else
   " CtrlP fallback
 end
+
+"=== bbye ====
+nnoremap <Leader>q :Bdelete<CR>
 
 "==== Syntastic ====
 let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
