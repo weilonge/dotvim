@@ -86,14 +86,14 @@ Plug 'moll/vim-bbye'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all', 'on': 'FZF' }
 
 Plug 'pangloss/vim-javascript', {'for': ['js', 'jsm', 'html', 'xml', 'css', 'json', 'jsx']}
-Plug 'mxw/vim-jsx'
+Plug 'mxw/vim-jsx', {'for': ['js', 'jsm', 'html', 'xml', 'css', 'json', 'jsx']}
 
-Plug 'jelera/vim-javascript-syntax'
+Plug 'jelera/vim-javascript-syntax', {'for': ['js', 'jsm', 'html', 'xml', 'css', 'json', 'jsx']}
 " othree's syntax is better than jelera's for me.
 " However, the syntax of yajs is broken with arrow function.
 " Plug 'othree/yajs.vim'
 
-Plug 'othree/javascript-libraries-syntax.vim'
+Plug 'othree/javascript-libraries-syntax.vim', {'for': ['js', 'jsm', 'html', 'xml', 'css', 'json', 'jsx']}
 
 Plug 'maksimr/vim-jsbeautify', {'on': ['DontLoadMe']} " Workaround to prevent loading.
 call plug#end()
