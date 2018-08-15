@@ -23,6 +23,11 @@ elseif (&t_Co == 8)
   colorscheme jellybeans
 endif
 
+set noswapfile
+set backupdir=~/.vim/.metafile/backup//
+set directory=~/.vim/.metafile/swap//
+set undodir=~/.vim/.metafile/undo//
+
 set backspace=indent,eol,start
 set tabstop=2           " number of visual spaces per TAB
 set shiftwidth=2
