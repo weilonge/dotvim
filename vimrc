@@ -61,7 +61,7 @@ let mapleader = ","
 " nnoremap <C-L><C-L> :set invrelativenumber<CR>
 
 " Toggle paste mode or easy pasting:
-nnoremap <C-P><C-P> :set invpaste<CR>
+" nnoremap <C-P><C-P> :set invpaste<CR>
 
 "==== OverLength 80 ====
 if exists('+colorcolumn')
