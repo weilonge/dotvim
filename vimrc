@@ -83,6 +83,7 @@ Plug 'xolox/vim-misc'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'moll/vim-bbye'
 Plug 'sunaku/vim-dasht'
+Plug 'weilonge/vim-ydict', { 'do': 'npm install -g ydict.js'}
 
 " Need to install fzf with git:
 " git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -133,6 +134,15 @@ if executable('fzf')
 else
   " CtrlP fallback
 end
+
+"==== vim-ydict ====
+" Search a word under cursor:
+" - search a word
+nnoremap <silent> <Leader>d :call YDict([expand('<cword>'), expand('<cWORD>')])<Return>
+
+" Search a word for your selected text:
+" - search a word
+vnoremap <silent> <Leader>d y:<C-U>call YDict(getreg(0))<Return>
 
 "==== vim-dasht ====
 " Search docsets for something you type:
