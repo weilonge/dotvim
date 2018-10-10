@@ -82,6 +82,7 @@ Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'moll/vim-bbye'
+Plug 'sunaku/vim-dasht'
 
 " Need to install fzf with git:
 " git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
@@ -132,6 +133,36 @@ if executable('fzf')
 else
   " CtrlP fallback
 end
+
+"==== vim-dasht ====
+" Search docsets for something you type:
+" - search related docsets
+nnoremap <Leader>k :Dasht<Space>
+
+" - search ALL the docsets
+nnoremap <Leader><Leader>k :Dasht!<Space>
+
+" Search docsets for words under cursor:
+" - search related docsets
+nnoremap <silent> <Leader>K :call Dasht([expand('<cword>'), expand('<cWORD>')])<Return>
+
+" - search ALL the docsets
+nnoremap <silent> <Leader><Leader>K :call Dasht([expand('<cword>'), expand('<cWORD>')], '!')<Return>
+
+" Search docsets for your selected text:
+" - search related docsets
+vnoremap <silent> <Leader>K y:<C-U>call Dasht(getreg(0))<Return>
+
+" - search ALL the docsets
+vnoremap <silent> <Leader><Leader>K y:<C-U>call Dasht(getreg(0), '!')<Return>
+
+let g:dasht_filetype_docsets = {} " filetype => list of docset name regexp
+
+" When in C++, also search C, Boost, and OpenGL:
+let g:dasht_filetype_docsets['cpp'] = ['^c$', 'boost', 'OpenGL']
+
+" When in HTML, also search CSS, JavaScript, Bootstrap, and jQuery:
+let g:dasht_filetype_docsets['html'] = ['css', 'js', 'bootstrap']
 
 "=== bbye ====
 nnoremap <Leader>q :Bdelete<CR>
