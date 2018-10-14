@@ -1,0 +1,6 @@
+
+
+Select the current word and apply it to a console command. e.g. echo
+- nnoremap <C-E> viwy:!echo <C-R>"<CR>
+
+
