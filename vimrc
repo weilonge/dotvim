@@ -147,17 +147,17 @@ vnoremap <silent> <Leader>d y:<C-U>call YDict(getreg(0))<Return>
 "==== vim-dasht ====
 " Search docsets for something you type:
 " - search related docsets
-nnoremap <Leader>k :Dasht<Space>
+nnoremap <Leader>K :Dasht<Space>
 
 " - search ALL the docsets
-nnoremap <Leader><Leader>k :Dasht!<Space>
+nnoremap <Leader><Leader>K :Dasht!<Space>
 
 " Search docsets for words under cursor:
 " - search related docsets
-nnoremap <silent> <Leader>K :call Dasht([expand('<cword>'), expand('<cWORD>')])<Return>
+nnoremap <silent> <Leader>k :call Dasht([expand('<cword>'), expand('<cWORD>')])<Return>
 
 " - search ALL the docsets
-nnoremap <silent> <Leader><Leader>K :call Dasht([expand('<cword>'), expand('<cWORD>')], '!')<Return>
+nnoremap <silent> <Leader><Leader>k :call Dasht([expand('<cword>'), expand('<cWORD>')], '!')<Return>
 
 " Search docsets for your selected text:
 " - search related docsets
