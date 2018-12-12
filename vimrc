@@ -230,6 +230,17 @@ augroup AutoStripTrailingSpace
   autocmd BufWritePre * call StripTrailingWhitespace()
 augroup END
 
+"==== UTF-8 Encoding ====
+if has("multi_byte")
+  " if &termencoding == ""
+  "   let &termencoding = &encoding
+  " endif
+  set encoding=utf-8
+  setglobal fileencoding=utf-8
+  "setglobal bomb
+  set fileencodings=ucs-bom,utf-8,latin1
+endif
+
 "==== window switch ====
 nnoremap <silent> <C-h> :wincmd h<CR>
 nnoremap <silent> <C-j> :wincmd j<CR>
