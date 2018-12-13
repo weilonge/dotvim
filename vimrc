@@ -171,8 +171,11 @@ let g:dasht_filetype_docsets = {} " filetype => list of docset name regexp
 " When in C++, also search C, Boost, and OpenGL:
 let g:dasht_filetype_docsets['cpp'] = ['^c$', 'boost', 'OpenGL']
 
-" When in HTML, also search CSS, JavaScript, Bootstrap, and jQuery:
-let g:dasht_filetype_docsets['html'] = ['css', 'js', 'bootstrap']
+" When in html/js/jsx/css, also search JavaScript, CSS, React and HTML:
+let g:dasht_filetype_docsets['html'] = ['JavaScript', 'CSS', 'React', 'HTML']
+let g:dasht_filetype_docsets['js'] = ['JavaScript', 'CSS', 'React', 'HTML']
+let g:dasht_filetype_docsets['jsx'] = ['JavaScript', 'CSS', 'React', 'HTML']
+let g:dasht_filetype_docsets['css'] = ['JavaScript', 'CSS', 'React', 'HTML']
 
 "=== bbye ====
 nnoremap <Leader>q :Bdelete<CR>
