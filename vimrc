@@ -103,6 +103,7 @@ Plug 'jelera/vim-javascript-syntax', {'for': ['js', 'jsm', 'html', 'xml', 'css',
 Plug 'othree/javascript-libraries-syntax.vim', {'for': ['js', 'jsm', 'html', 'xml', 'css', 'json', 'jsx']}
 
 Plug 'maksimr/vim-jsbeautify', {'on': ['DontLoadMe']} " Workaround to prevent loading.
+Plug 'tikhomirov/vim-glsl'
 call plug#end()
 
 "==== fzf ====
