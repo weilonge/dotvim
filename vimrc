@@ -83,6 +83,7 @@ Plug 'xolox/vim-misc'
 Plug 'tmux-plugins/vim-tmux-focus-events'
 Plug 'moll/vim-bbye'
 Plug 'sunaku/vim-dasht'
+Plug 'mileszs/ack.vim'
 Plug 'weilonge/vim-ydict', { 'do': 'npm install -g ydict.js'}
 
 " Need to install fzf with git:
@@ -135,6 +136,11 @@ if executable('fzf')
 else
   " CtrlP fallback
 end
+
+"==== ack.vim ====
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 "==== vim-ydict ====
 " Search a word under cursor:
