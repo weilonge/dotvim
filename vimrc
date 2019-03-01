@@ -201,6 +201,12 @@ else
   set updatetime=750
 endif
 
+if exists('+signcolumn')
+  set signcolumn=yes
+else
+  let g:gitgutter_sign_column_always = 1
+endif
+
 "==== vim-javascript ====
 let g:javascript_plugin_jsdoc = 1
 
@@ -216,13 +222,6 @@ let g:airline_theme='cobalt2'
 
 "==== vim-session ====
 let g:session_autosave = 'no'
-
-"==== vim-gitgutter ====
-if exists('+signcolumn')
-  set signcolumn=yes
-else
-  let g:gitgutter_sign_column_always = 1
-endif
 
 "==== Trailing White Spaces ====
 " usage: :call StripTrailingWhitespace()
