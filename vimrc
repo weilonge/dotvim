@@ -207,6 +207,12 @@ else
   let g:gitgutter_sign_column_always = 1
 endif
 
+" Fix the foreground color after this commit:
+" commit fd834e48eed21cc3c3ab66779a2296a16f41cbca
+" Author: Andy Stewart <boss@airbladesoftware.com>
+" Date:   Mon Feb 4 14:45:58 2019 +0000
+highlight GitGutterDelete ctermfg=1
+
 "==== vim-javascript ====
 let g:javascript_plugin_jsdoc = 1
 
