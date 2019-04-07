@@ -48,6 +48,9 @@ set autoread
 
 set hidden
 
+" Avoid ESC key
+inoremap <Esc> <Nop>
+
 if exists('+clipboard')
   set clipboard^=unnamed,unnamedplus
 endif
