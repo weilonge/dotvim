@@ -78,7 +78,7 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vim-syntastic/syntastic'
+Plug 'dense-analysis/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
@@ -183,12 +183,8 @@ let g:dasht_filetype_docsets['js'] = ['JavaScript', 'CSS', 'React', 'HTML', 'Jes
 let g:dasht_filetype_docsets['jsx'] = ['JavaScript', 'CSS', 'React', 'HTML', 'Jest']
 let g:dasht_filetype_docsets['css'] = ['JavaScript', 'CSS', 'React', 'HTML', 'Jest']
 
-"=== bbye ====
+"==== bbye ====
 nnoremap <Leader>q :Bdelete<CR>
-
-"==== Syntastic ====
-let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': [],'passive_filetypes': [] }
-" nnoremap <C-w>E :SyntasticCheck<CR> :SyntasticToggleMode<CR>
 
 "==== vim-gitgutter ====
 " preview, stage, and revert hunks with <leader>hp, <leader>hs, and <leader>hr
