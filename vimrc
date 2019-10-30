@@ -106,6 +106,8 @@ Plug 'jelera/vim-javascript-syntax', {'for': ['js', 'jsm', 'html', 'xml', 'css',
 " However, the syntax of yajs is broken with arrow function.
 " Plug 'othree/yajs.vim'
 
+Plug 'ianks/vim-tsx'
+
 Plug 'othree/javascript-libraries-syntax.vim', {'for': ['js', 'jsm', 'html', 'xml', 'css', 'json', 'jsx']}
 
 Plug 'maksimr/vim-jsbeautify', {'on': ['DontLoadMe']} " Workaround to prevent loading.
