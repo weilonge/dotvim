@@ -98,17 +98,8 @@ Plug 'Shougo/vimshell.vim'
 " Then apply :PlugInstall in vim
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all', 'on': 'FZF' }
 
-Plug 'pangloss/vim-javascript', {'for': ['js', 'jsm', 'html', 'xml', 'css', 'json', 'jsx']}
-Plug 'mxw/vim-jsx', {'for': ['js', 'jsm', 'html', 'xml', 'css', 'json', 'jsx']}
-
-Plug 'jelera/vim-javascript-syntax', {'for': ['js', 'jsm', 'html', 'xml', 'css', 'json', 'jsx']}
-" othree's syntax is better than jelera's for me.
-" However, the syntax of yajs is broken with arrow function.
-" Plug 'othree/yajs.vim'
-
 Plug 'ianks/vim-tsx'
-
-Plug 'othree/javascript-libraries-syntax.vim', {'for': ['js', 'jsm', 'html', 'xml', 'css', 'json', 'jsx']}
+Plug 'leafgarland/typescript-vim', {'for': ['js', 'jsm', 'html', 'xml', 'css', 'json', 'jsx', 'ts', 'tsx']}
 
 Plug 'maksimr/vim-jsbeautify', {'on': ['DontLoadMe']} " Workaround to prevent loading.
 Plug 'tikhomirov/vim-glsl'
