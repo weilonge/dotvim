@@ -76,6 +76,8 @@ endif
 "==== vim-plug ====
 call plug#begin('~/.vim/plugged')
 
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dense-analysis/ale'
@@ -140,6 +142,9 @@ end
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+"==== NERDTree ====
+map <C-n> :NERDTreeToggle<CR>
 
 "==== vim-ydict ====
 " Search a word under cursor:
