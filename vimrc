@@ -48,6 +48,12 @@ set autoread
 
 set hidden
 
+" Better display for messages
+set cmdheight=2
+
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
 " Avoid ESC key
 " inoremap <Esc> <Nop>
 
