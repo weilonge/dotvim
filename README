@@ -11,4 +11,4 @@ Update:
     $ vim +PlugUpgrade +PlugUpdate +qa
 
 Optional:
-    Apply `:CocInstall coc-tsserver coc-eslint coc-json coc-prettier coc-css` in vim to install typescript support.
+    Apply `:CocInstall coc-tsserver coc-eslint coc-json coc-prettier coc-css coc-tslint-plugin` in vim to install typescript support.
