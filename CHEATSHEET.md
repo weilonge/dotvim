@@ -3,8 +3,15 @@
 >Disclaimer: This cheatsheet is summarized from personal experience and other online tutorials. It should not be considered as an official advice.
 
 ## Shortcut
+
+Whole file indentation
 ```vim
-gg=G    # Whole file indentation
+gg=G
+```
+
+Select the current word and apply it to a console command. e.g. echo
+```vim
+nnoremap <C-E> viwy:!echo <C-R>"<CR>
 ```
 
 ## Plugin Shortcut
@@ -36,3 +43,4 @@ v    to open in vertical split
 gv   to open in vertical split, keeping focus on the results
 q    to close the quickfix window
 ```
+
