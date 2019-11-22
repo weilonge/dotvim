@@ -72,11 +72,11 @@ let mapleader = ","
 " Toggle paste mode or easy pasting:
 " nnoremap <C-P><C-P> :set invpaste<CR>
 
-"==== OverLength 80 ====
+"==== OverLength 100 ====
 if exists('+colorcolumn')
-  set colorcolumn=80
+  set colorcolumn=100
 else
-  autocmd BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+  autocmd BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>100v.\+', -1)
 endif
 
 "==== vim-plug ====
