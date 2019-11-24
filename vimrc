@@ -72,11 +72,11 @@ let mapleader = ","
 " Toggle paste mode or easy pasting:
 " nnoremap <C-P><C-P> :set invpaste<CR>
 
-"==== OverLength 100 ====
+"==== OverLength 80 ====
 if exists('+colorcolumn')
-  set colorcolumn=100
+  set colorcolumn=80
 else
-  autocmd BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>100v.\+', -1)
+  autocmd BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
 
 "==== vim-plug ====
@@ -387,3 +387,23 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+
+function FindSessionDirectory() abort
+  if len(argv()) > 0
+    return fnamemodify(argv()[0], ':p:h')
+  endif
+  return getcwd()
+endfunction!
+
+function LoadLocalVimrc() abort
+  let current = FindSessionDirectory()
+  while ((current != '.') && (current != '/'))
+    let localvimrc = current . '/.localvimrc'
+    if filereadable(localvimrc)
+      execute 'source' localvimrc
+      return
+    endif
+    let current = fnamemodify(current, ':h')
+  endwhile
+endfunction
+call LoadLocalVimrc()
