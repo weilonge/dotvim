@@ -92,7 +92,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'xolox/vim-session'
 Plug 'xolox/vim-misc'
 Plug 'tmux-plugins/vim-tmux-focus-events'
-Plug 'moll/vim-bbye'
 Plug 'sunaku/vim-dasht'
 Plug 'mileszs/ack.vim'
 Plug 'weilonge/vim-ydict', { 'do': 'npm install -g ydict.js'}
@@ -202,8 +201,8 @@ let g:dasht_filetype_docsets['jsx'] = ['JavaScript', 'CSS', 'React', 'HTML', 'Je
 let g:dasht_filetype_docsets['tsx'] = ['JavaScript', 'CSS', 'React', 'HTML', 'Jest']
 let g:dasht_filetype_docsets['css'] = ['JavaScript', 'CSS', 'React', 'HTML', 'Jest']
 
-"==== bbye ====
-nnoremap <Leader>q :Bdelete<CR>
+"==== plugin/bclose.vim ====
+nnoremap <Leader>q :Bclose<CR>
 
 "==== vim-gitgutter ====
 " preview, stage, and revert hunks with <leader>hp, <leader>hs, and <leader>hr
