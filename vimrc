@@ -105,9 +105,9 @@ Plug 'Shougo/vimshell.vim'
 " Then apply :PlugInstall in vim
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all', 'on': 'FZF' }
 
-Plug 'ianks/vim-tsx'
+Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim', {'for': ['js', 'jsm', 'html', 'xml', 'css', 'json', 'jsx', 'ts', 'tsx']}
-Plug 'HerringtonDarkholme/yats.vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 if !filereadable(expand('~/.vim/.disable_coc'))
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
