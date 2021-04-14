@@ -1,0 +1,10 @@
+" Usage:
+" `ln -s ~/.vim/sample.conf/overlength.localvimrc ~/where/your/project/.localvimrc`
+
+"==== OverLength 100 ====
+if exists('+colorcolumn')
+  set colorcolumn=100
+else
+  autocmd BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>100v.\+', -1)
+endif
+
