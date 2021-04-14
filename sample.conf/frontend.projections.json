@@ -1,0 +1,45 @@
+{
+  "src/*.ts": {
+    "alternate": "src/{dirname}/tests/{basename}.tests.ts",
+    "type": "source"
+  },
+  "src/**/tests/*.tests.ts": {
+    "alternate": "src/{dirname}/{basename}.ts",
+    "type": "test"
+  },
+  "src/*.tsx": {
+    "alternate": [
+      "src/{dirname}/{basename}.css",
+      "src/{dirname}/stories/{basename}.stories.tsx",
+      "src/{dirname}/tests/{basename}.tests.tsx"
+    ],
+    "type": "source"
+  },
+  "src/*.css": {
+    "alternate": [
+      "src/{dirname}/stories/{basename}.stories.tsx",
+      "src/{dirname}/tests/{basename}.tests.tsx",
+      "src/{dirname}/{basename}.tsx"
+    ],
+    "type": "css"
+  },
+  "src/**/stories/*.stories.tsx": {
+    "alternate": [
+      "src/{dirname}/stories/{basename}.stories.css",
+      "src/{dirname}/tests/{basename}.tests.tsx",
+      "src/{dirname}/{basename}.tsx"
+    ],
+    "type": "story"
+  },
+  "src/**/stories/*.stories.css": {
+    "alternate": [
+      "src/{dirname}/tests/{basename}.tests.tsx",
+      "src/{dirname}/{basename}.tsx"
+    ],
+    "type": "storycss"
+  },
+  "src/**/tests/*.tests.tsx": {
+    "alternate": "src/{dirname}/{basename}.tsx",
+    "type": "test"
+  }
+}

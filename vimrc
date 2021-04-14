@@ -97,6 +97,7 @@ Plug 'mileszs/ack.vim'
 Plug 'weilonge/vim-ydict', { 'do': 'npm install -g ydict.js'}
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'Shougo/vimshell.vim'
+Plug 'tpope/vim-projectionist'
 
 " Need to install fzf with git:
 " git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
