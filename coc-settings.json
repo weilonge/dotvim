@@ -1,3 +1,7 @@
 {
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "javascript.suggest.completeFunctionCalls": false,
+  "typescript.suggest.completeFunctionCalls": false,
   "java.configuration.updateBuildConfiguration": "disabled"
 }

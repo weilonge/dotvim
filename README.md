@@ -24,11 +24,11 @@ $ vim +PlugUpgrade +PlugUpdate +qa
 
 Apply the command to install coc related plugins:
 ```console
-$ vim -c ':CocInstall coc-tsserver coc-eslint coc-json coc-prettier coc-css coc-tslint-plugin'
+$ vim -c ':CocInstall coc-tsserver coc-eslint coc-json coc-prettier coc-css'
 ```
 
 Apply the command to update coc related plugins:
 ```console
-$ vim +CocUpdateSync
+$ vim +CocUpdate
 ```
 
