@@ -109,3 +109,6 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
+" This is for fixing the bug of missing cursor in CocList.
+" See https://github.com/neoclide/coc.nvim/issues/1775#issuecomment-757764053
+let g:coc_disable_transparent_cursor = 1
