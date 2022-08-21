@@ -82,8 +82,9 @@ endif
 "==== vim-plug ====
 call plug#begin('~/.vim/plugged')
 
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+" Disable nerdtree
+""" Plug 'scrooloose/nerdtree'
+""" Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 " Disable ale since coc is used for code references/definition
