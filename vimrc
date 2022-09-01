@@ -117,7 +117,6 @@ endif
 
 Plug 'maksimr/vim-jsbeautify', {'on': ['DontLoadMe']} " Workaround to prevent loading.
 Plug 'tikhomirov/vim-glsl'
-Plug 'calviken/vim-gdscript3'
 call plug#end()
 
 "==== fzf ====
