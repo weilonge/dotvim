@@ -3,4 +3,5 @@ plugged
 sessions
 .metafile
 .disable_coc
+.enable_copilot
 
