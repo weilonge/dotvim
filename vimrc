@@ -48,6 +48,9 @@ set autoread
 
 set hidden
 
+" Disable mouse support
+set mouse=
+
 " Better display for messages
 set cmdheight=2
 
