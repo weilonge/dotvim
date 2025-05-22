@@ -9,6 +9,10 @@ if (&t_Co == 256)
     autocmd ColorScheme * call _256ColorHighlights()
   augroup END
   colorscheme hybrid
+  highlight statusline cterm=NONE gui=NONE
+  highlight statuslinenc cterm=NONE gui=NONE
+  highlight tabline cterm=NONE gui=NONE
+  highlight winbar cterm=NONE gui=NONE
 elseif (&t_Co == 16)
   colorscheme noctu
 elseif (&t_Co == 8)
