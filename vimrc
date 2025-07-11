@@ -106,6 +106,11 @@ Plug 'weilonge/vim-ydict', { 'do': 'npm install -g ydict.js'}
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'Shougo/vimshell.vim'
 Plug 'tpope/vim-projectionist'
+
+if bufname() !~# '\.g/\|COMMIT_EDITMSG\|MERGE_MSG\|git-rebase-todo' && exists('$DPRINT_BIN_PATH')
+  Plug 'Canva/dprint-vim-plugin'
+endif
+
 if filereadable(expand('~/.vim/.enable_copilot'))
   Plug 'github/copilot.vim'
 endif
@@ -128,6 +133,12 @@ endif
 Plug 'maksimr/vim-jsbeautify', {'on': ['DontLoadMe']} " Workaround to prevent loading.
 Plug 'tikhomirov/vim-glsl'
 call plug#end()
+
+"==== dprint ====
+if bufname() !~# '\.g/\|COMMIT_EDITMSG\|MERGE_MSG\|git-rebase-todo' && exists('$DPRINT_BIN_PATH')
+  let g:dprint_dir = expand('$DPRINT_BIN_PATH')
+  let g:dprint_format_on_save = 1
+endif
 
 "==== fzf ====
 if executable('fzf')
